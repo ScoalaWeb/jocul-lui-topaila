@@ -1,0 +1,9 @@
+.cards {
+    display: flex;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee * {
+        animation: none !important;
+    }
+}

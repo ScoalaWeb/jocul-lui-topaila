@@ -1,0 +1,48 @@
+.GameView {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 4rem;
+    padding: 3rem 4rem;
+    width: 100dvw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.title {
+
+}
+
+.score {
+    order: 1;
+    padding: 1rem 3rem;
+}
+
+.board {
+    place-self: center;
+}
+
+@media (orientation: portrait) {
+    .GameView {
+        grid-template-columns: auto auto;
+        grid-template-rows: min-content auto;
+        height: 100dvh;
+    }
+
+    .score {
+        order: 0;
+        justify-self: end;
+        align-self: center;
+        padding: 0;
+    }
+
+    .board {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 30rem) {
+    .GameView {
+        padding: 1rem;
+        gap: 1rem;
+    }
+}

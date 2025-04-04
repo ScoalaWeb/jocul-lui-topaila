@@ -1,0 +1,53 @@
+.GameBoard {
+    --space: 2vmin;
+
+    position: relative;
+    background: var(--table);
+    padding: var(--space);
+    border-radius: 0.25rem;
+    box-shadow: 1.375rem 1.375rem 0 0 var(--black);
+
+    width: 73vmin;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--space);
+
+    > * {
+        width: 100% !important;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.reset {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(35, 36, 36, 0.40);
+    backdrop-filter: blur(3.5px);
+    overflow: hidden;
+}
+
+.restart {
+    animation: restart-animation 1s ease-in-out;
+}
+
+@keyframes restart-animation {
+    from {
+        transform: translateY(100dvh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

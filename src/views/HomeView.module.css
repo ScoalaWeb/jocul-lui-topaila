@@ -1,0 +1,12 @@
+.home {
+    display: grid;
+    grid-template-rows: auto min-content;
+    height: 100dvh;
+}
+
+.title {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    gap: 4vh;
+}

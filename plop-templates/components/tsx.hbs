@@ -1,0 +1,13 @@
+import style from "./{{ name }}.module.css";
+
+export interface {{ name }}Props {
+    value: number;
+}
+
+export function {{ name }}({ value }: {{ name }}Props) {
+    return (
+        <div className={ style.{{ name }} }>
+            {value}
+        </div>
+    );
+}

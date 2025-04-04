@@ -1,0 +1,48 @@
+.Title {
+    font-size: 3.75rem;
+    text-shadow: 1px 3px 0 #000;
+    display: grid;
+
+}
+
+.giga {
+    font-size: 11vw;
+    display: block;
+}
+
+.giga .character {
+    margin-inline: 0.25em;
+}
+
+.drop .character {
+    position: relative;
+    --size: 0.95em;
+
+    &::after {
+        content: "";
+        background-image: url("/bunny.svg");
+        background-size: cover;
+        display: block;
+        width: var(--size);
+        height: var(--size);
+        position: absolute;
+        top: 0.2em;
+        right: -0.32em;
+
+        animation: drop 1s ease-out;
+        animation-delay: 1s;
+        animation-fill-mode: backwards;
+    }
+}
+
+@keyframes drop {
+    0% {
+        transform: translatey(-50dvh);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}

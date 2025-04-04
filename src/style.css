@@ -1,0 +1,44 @@
+:root {
+    --primary: #F4D63A;
+    --primary-active: #EDC700;
+    --secondary: #FFD5E2;
+    --secondary-active: #FFB6CD;
+    --white: #fff;
+    --black: #000;
+    --bg: #248472;
+    --table: #01637C;
+
+    --btn-font: "Inter", Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: "Patrick Hand SC";
+    src: url("./assets/fonts/PatrickHandSC-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+
+    font-family: "Patrick Hand SC", fantasy;
+    margin: 0;
+
+}
+
+.sr-only {
+    position: absolute;
+    left: -200dvh;
+    top: -200dvh;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

@@ -1,0 +1,15 @@
+import { Meta } from "@storybook/react";
+import { {{ name }} as component } from "./{{ name }}.tsx";
+
+const meta = {
+    title: "Game/{{ name }}",
+    component,
+} satisfies Meta<typeof component>
+
+export default meta;
+
+export const {{ name }} = {
+    args: {
+        value: 50,
+    },
+};

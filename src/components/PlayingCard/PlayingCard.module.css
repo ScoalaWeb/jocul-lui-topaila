@@ -1,0 +1,24 @@
+.PlayingCard {
+    position: relative;
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.frontSide, .backSide {
+    backface-visibility: hidden;
+    transition: transform 0.25s ease-in-out;
+}
+
+.backSide {
+    position: absolute;
+    inset: 0;
+}
+
+.front .backSide {
+    transform: rotateY(-180deg);
+}
+
+.back .frontSide {
+    transform: rotateY(180deg);
+}

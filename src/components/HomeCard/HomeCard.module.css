@@ -1,0 +1,10 @@
+.card {
+    width: 15rem;
+    aspect-ratio: 1;
+    border: 0.125rem solid var(--white);
+    background: var(--bg);
+}
+
+.logo {
+    background: var(--secondary);
+}

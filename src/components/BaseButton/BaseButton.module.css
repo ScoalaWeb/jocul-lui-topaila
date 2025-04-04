@@ -1,0 +1,45 @@
+.btn {
+    font-family: var(--btn-font);
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1.25rem 3rem;
+    border: 0.25rem solid var(--black);
+    box-shadow: 0.5rem 0.5rem 0 var(--black);
+    border-radius: 0.125rem;
+    transition-property: translate, background-color, box-shadow;
+    transition-duration: 0.25s;
+
+    &:active {
+        translate: 0.25rem 0.25rem;
+        box-shadow: 0.25rem 0.25rem 0 var(--black);
+    }
+}
+
+a.btn {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.start {
+    background: var(--secondary);
+
+    &:hover, &:focus {
+        background: var(--secondary-active);
+    }
+
+    &:active {
+        background: var(--secondary);
+    }
+}
+
+.restart {
+    background: var(--primary);
+
+    &:hover, &:focus {
+        background: var(--primary-active);
+    }
+
+    &:active {
+        background: var(--primary);
+    }
+}

@@ -1,0 +1,30 @@
+.marquee {
+    --duration: 10s;
+    max-width: 100dvw;
+    overflow: hidden;
+    user-select: none;
+}
+
+.inner {
+    display: flex;
+    width: min-content;
+}
+
+.instance {
+    white-space: nowrap;
+    animation: marquee var(--duration) infinite linear;
+}
+
+.reversed {
+    animation-direction: reverse;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
