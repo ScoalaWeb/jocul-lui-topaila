@@ -8,7 +8,7 @@ export interface BaseMarqueeProps {
 }
 
 export function BaseMarquee({ reversed, duration, children }: PropsWithChildren<BaseMarqueeProps>) {
-    const [repeats, setRepeats] = useState(2);
+    const [repeats, setRepeats] = useState(1);
     const wrapper = useRef<HTMLDivElement>(null)
     const inner = useRef<HTMLDivElement>(null)
 
@@ -19,6 +19,7 @@ export function BaseMarquee({ reversed, duration, children }: PropsWithChildren<
         const innerWidth = inner.current.clientWidth;
 
         if (wrapperWidth < innerWidth) {
+            setRepeats(Math.max(2, repeats));
             return;
         }
 
@@ -27,7 +28,7 @@ export function BaseMarquee({ reversed, duration, children }: PropsWithChildren<
         setRepeats(1 + Math.ceil(wrapperWidth / instanceWidth));
     }
 
-    useEffect(updateRepeats, [children]);
+    useEffect(updateRepeats, [children, repeats]);
 
     useEffect(() => {
         window.addEventListener("resize", updateRepeats);
@@ -39,6 +40,7 @@ export function BaseMarquee({ reversed, duration, children }: PropsWithChildren<
 
     return (
         <div
+            key={repeats}
             ref={wrapper}
             className={ style.marquee }
             style={{
